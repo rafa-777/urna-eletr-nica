@@ -1,0 +1,36 @@
+#Urna eletrônica
+
+Importpickle
+arquivo = open('tmp/arquivo.dat', 'wb')
+eleitor = int(input('Informe o número do seu título: '))
+for i in range(eleitor):
+  pickle.dump(i, arquivo)
+
+t = ('João 14', 'José 18', 'Francisco 21', 'Branco', 'Nulo')
+d = {t[0]: 0, t[1]: 0, t[2]: 0, t[3]: 0, t[4]: 0}
+
+  print candidato João 14 
+  print candidato José 18
+  print candidato Francisco 21
+  print Branco 00
+
+voto = int(raw_input('Informe o número do seu candidato a vereador: '))
+    
+  if voto == '14': d[t[0]] = +1
+  if voto == '18': d[t[1]] = +1
+  if voto == '21': d[t[2]] = +1
+  if voto == '00': d[t[3]] = +1
+  else: d[t[4]] = +1
+
+for candidato in d.keys():
+  for i in range(d[candidato]): 
+            
+if d[candidato] > maior:
+  maior = d[candidato]
+  vereador = candidato 
+  print candidato
+  
+  print 'O candidato', vereador, 'é o novo vereador de Pirassununga!'
+
+arquivo.close()
+raw_input('\nContagem de votos finalizada com sucesso')
